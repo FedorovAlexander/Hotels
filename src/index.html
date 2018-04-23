@@ -8,29 +8,88 @@
 
 <body>
   @@include('img/sprite-svg.svg')
+  <header class="page-header">
+    <menu class="menu">
+      <ul class="menu__list">
+        <li class="menu__list-item"><a href="#" class="menu__list-link">Search tickets</a></li>
+        <li class="menu__list-item"><a href="#" class="menu__list-link">Sapsan</a></li>
+        <li class="menu__list-item"><a href="#" class="menu__list-link">Allegro</a></li>
+        <li class="menu__list-item"><a href="#" class="menu__list-link">Trans-siberian</a></li>
+        <li class="menu__list-item"><a href="#" class="menu__list-link">FAQ</a></li>
+        <li class="menu__list-item"><a href="#" class="menu__list-link">Tickets guide</a>
+          <ul class="menu__submenu-list">
+            <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Group travel</a></li>
+            <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Ticket types</a></li>
+            <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Child policy</a></li>
+            <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Change ticket request</a></li>
+            <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Cansel tickets</a></li>
+          </ul>
+        </li>
+        <li class="menu__list-item"><a href="" class="menu__list-link">Contact us</a></li>
+      </ul>
+    </menu>
+    <a href="" class="sign-in-link">Sign in</a>
+  </header>
   <main>
-    <header class="page-header">
-      <menu class="menu">
-        <ul class="menu__list">
-          <li class="menu__list-item"><a href="#" class="menu__list-link">Search tickets</a></li>
-          <li class="menu__list-item"><a href="#" class="menu__list-link">Sapsan</a></li>
-          <li class="menu__list-item"><a href="#" class="menu__list-link">Allegro</a></li>
-          <li class="menu__list-item"><a href="#" class="menu__list-link">Trans-siberian</a></li>
-          <li class="menu__list-item"><a href="#" class="menu__list-link">FAQ</a></li>
-          <li class="menu__list-item"><a href="#" class="menu__list-link">Tickets guide</a>
-            <ul class="menu__submenu-list">
-              <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Group travel</a></li>
-              <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Ticket types</a></li>
-              <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Child policy</a></li>
-              <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Change ticket request</a></li>
-              <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Cansel tickets</a></li>
-            </ul>
-          </li>
-          <li class="menu__list-item"><a href="" class="menu__list-link">Contact us</a></li>
-        </ul>
-      </menu>
-      <a href="" class="sign-in-link">Sign in</a>
-    </header>
+    <div class="container">
+      <section class="input-block">
+        <h1 class="main-title">Russian Train Tickets</h1>
+        <article class="input-city">
+          <div class="input-city__items">
+            <label for="" class="input-city__item-title">
+              Departure city:
+              <input type="text" class="input-city__input-field" placeholder="Type city name">
+            </label>
+            <div class="input-city__example">
+              <span class="input-city__example-text">Ex:</span>
+              <a href="" class="input-city__example-link">St.Petersburg</a>
+              <a href="" class="input-city__example-link">Moscow</a>
+            </div>
+          </div>
+          <div class="input-city__items">
+            <label for="" class="input-city__item-title">
+              Arrival city:
+              <input type="text" class="input-city__input-field" placeholder="Type city name">
+            </label>
+            <div class="input-city__example">
+              <span class="input-city">Ex:</span>
+              <a href="" class="input-city__example-link">St.Petersburg</a>
+              <a href="" class="input-city__example-link">Moscow</a>
+            </div>
+          </div>
+        </article>
+        <article class="input-date-currency">
+          <div class="date-block">
+            <div class="date-block__item">
+              <label for="" class="date-block__label">
+                Departure date:
+                <input type="text" class="date-block__input" placeholder="dd.mm.yyyy">
+              </label>
+            </div>
+            <label for="" class="date-block__roundtrip-label">
+              Roundtrip
+              <input type="checkbox" class="date-block__roundtrip-check">
+            </label>
+            <div class="date-block__item">
+              <label for="" class="date-block__label">
+                Return date:
+                <input type="text" class="date-block__input" placeholder="dd.mm.yyyy">
+              </label>
+            </div>
+          </div>
+          <div class="currency"><label for="select-currency"></label><select name="" id="select-currency" class="currency__select">
+              <option value="" class="currency__select-option">USD</option>
+              <option value="" class="currency__select-option">RUB</option>
+              <option value="" class="currency__select-option">GBR</option>
+              <option value="" class="currency__select-option">EUR</option>
+              <option value="" class="currency__select-option">CHF</option>
+            </select>
+          </div>
+          <button class="search-button">Search</button>
+        </article>
+      </section>
+
+    </div>
 
   </main>
 </body>
