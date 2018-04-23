@@ -1,0 +1,16 @@
+build/*
+!build/readme.md
+design/
+.Saved/
+_arc/
+node_modules/
+.vscode/
+.DS_Store
+*.log
+*.rar
+*.zip
+.idea
+.publish
+ex_files
+Thumbs.db
+src/less/sprite.less
