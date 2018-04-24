@@ -1,7 +1,7 @@
 .menu {
     flex: 760;
-    padding-left: 10px;
-    padding-right: 23px;
+    padding-left: 12px;
+    padding-right: 10px;
     margin-top: 0;
     margin-bottom: 0;
   &__list {
@@ -11,10 +11,17 @@
     margin: 0;
     padding-left: 0;
   }
-  &__list-item {
-
+  &__list-item--multi {
+    padding-right: 15px;
+  }
+  &__list-link-icon {
+    position: absolute;
+    top: 5px;
+    right: -15px;
+    .sprite(@dropdown-arrow);
   }
   &__list-link {
+    position: relative;
     text-decoration: none;
     color: @text-color;
     text-transform: uppercase;
