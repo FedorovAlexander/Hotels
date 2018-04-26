@@ -1,0 +1,24 @@
+.search-button {
+  position: relative;
+  margin-top: 22px;
+  margin-right: 15px;
+  color: @text-color;
+  font-size: 16px;
+  width: 181px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-right: 25px;
+  padding-left: 55px;
+  box-shadow: inset 0 2px 0 #fcc272;
+  border-radius: 3px;
+  border: 1px solid #de5300;
+  background-image: linear-gradient(to top, #f75e02 0%, #fbb04c 100%);
+  &:after {
+			content: "";
+			position: absolute;
+			display: block;
+			top: 15px;
+			left: 54px;
+	  .sprite(@search);
+		}
+}
