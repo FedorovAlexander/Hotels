@@ -11,8 +11,22 @@
     margin: 0;
     padding-left: 0;
   }
+  &__list-item {
+    position: relative;
+    height: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    &:hover {
+      background-color: #f75c00;
+    }
+    &--active {
+      background-color: #f75c00;
+    }
+  }
   &__list-item--multi {
-    padding-right: 15px;
+    padding-right: 25px;
   }
   &__list-link-icon {
     position: absolute;
@@ -30,6 +44,12 @@
   }
   &__submenu-list {
     display: none;
+  }
+  &__submenu-list--active {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    display: block;
   }
 }
 .sign-in {
