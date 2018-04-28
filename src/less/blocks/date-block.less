@@ -23,14 +23,28 @@
   &__input--inactive {
     border: 1px solid #0076ad;
     background-color: #1395d3;
-    &:placeholder {
+    &::-webkit-input-placeholder {
       color: #94c4db;
     }
   }
-  &__icon {
+  &__icon--active {
     position: absolute;
-    top: 25px;
-    right: 5px;
+    top: 32px;
+    right: 15px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    // margin-top: 5px;
+    .sprite(@calendar);
+    width: 28px;
+  }
+  &__icon--disabled {
+    position: absolute;
+    top: 32px;
+    right: 15px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    // margin-top: 5px;
+    .sprite(@calendar-disabled);
   }
   &__roundtrip-label {
     position: relative;
