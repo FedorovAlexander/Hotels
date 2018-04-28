@@ -50,12 +50,33 @@
   }
   &__submenu-list {
     display: none;
+    list-style: none;
+    padding-left: 0;
+  }
+  &__submenu-item {
+    width: 160px;
+    border: 1px solid #d7d7d7;
   }
   &__submenu-list--active {
     position: absolute;
     top: 40px;
     left: 0;
     display: block;
+  }
+  &__submenu-link {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    background-color: #fff;
+    transition: background-color 0.2s linear;
+    padding-left: 10px;
+    padding-top: 8px;
+    padding-bottom: 5px;
+    &:hover {
+    background-color: #bfd8eb;
+    transition: background-color 0.2s linear;
+    }
   }
 }
 .sign-in {
