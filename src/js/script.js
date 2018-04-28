@@ -14,5 +14,5 @@ multiMenu.addEventListener("mouseout", function() {
 
 
 $( function() {
-    $( "#departure-date" ).datepicker();
+    $( "#departure-date" ).datepicker({ dateFormat: 'dd.mm.yy' });
   } );;
