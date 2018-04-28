@@ -10,3 +10,9 @@ multiMenu.addEventListener("mouseout", function() {
   subMenu.classList.remove("menu__submenu-list--active")
   multiMenu.classList.toggle("menu__list-item--active")
 })
+
+
+
+$( function() {
+    $( "#departure-date" ).datepicker();
+  } );;
