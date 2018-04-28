@@ -7,7 +7,7 @@
 </head>
 
 <body>
-  @@include('img/sprite-svg.svg')
+    @@include('img/sprite-svg.svg')
   <header class="page-header">
     <div class="page-header__container container">
       <nav class="menu">
@@ -30,7 +30,6 @@
         </ul>
       </nav>
       <div class="sign-in">
-
         <a href="" class="sign-in__link"><div class="sign-in__icon"></div>Sign in</a>
       </div>
     </div>
@@ -70,6 +69,7 @@
               <label for="departure-date" class="date-block__label">
                 Departure date: <br>
                 <input type="text" class="date-block__input" id="departure-date" placeholder="dd.mm.yyyy">
+                <div class="date-block__icon--active"></div>
               </label>
             </div>
             <label for="roundtrip" class="date-block__roundtrip-label">
@@ -80,6 +80,7 @@
               <label for="return-date" class="date-block__label">
                 Return date: <br>
                 <input type="text" class="date-block__input date-block__input--inactive" id="return-date" disabled placeholder="dd.mm.yyyy">
+                <div class="date-block__icon--disabled"></div>
               </label>
             </div>
           </div>
