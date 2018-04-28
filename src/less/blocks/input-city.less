@@ -9,6 +9,7 @@
   }
   &__item-title {
     font-size: 14px;
+    position: relative;
   }
   &__input-field {
     width: 370px;
@@ -22,6 +23,14 @@
     margin-top: 5px;
     margin-bottom: 5px;
     font-size: 17px;
+  }
+  &__arrows {
+    position: absolute;
+    top: 37px;
+    left: -43px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    .sprite(@arrows);
   }
   &__example {
     font-size: 14px;

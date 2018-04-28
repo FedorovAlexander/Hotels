@@ -12,12 +12,14 @@ multiMenu.addEventListener("mouseout", function() {
 })
 
 
+//Date picker
 
 $( function() {
     $( "#departure-date" ).datepicker({ dateFormat: 'dd.mm.yy' });
     $( "#return-date" ).datepicker({ dateFormat: 'dd.mm.yy' });
   } );;
 
+//Date input
 
   var returnD = document.querySelector(".js-return");
   var returnIcon = document.querySelector("#return-icon")
@@ -37,3 +39,13 @@ $( function() {
     })
   }
   returnDate();
+
+  //Change city
+
+  var arrows = document.querySelector(".input-city__arrows")
+  var cityFrom =document.querySelector(".input-city__input-field--departure")
+  var cityTo =document.querySelector(".input-city__input-field--arrival")
+  arrows.addEventListener("click", function() {
+
+
+  })
