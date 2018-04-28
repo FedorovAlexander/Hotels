@@ -69,7 +69,7 @@
               <label for="departure-date" class="date-block__label">
                 Departure date: <br>
                 <input type="text" class="date-block__input" id="departure-date" placeholder="dd.mm.yyyy">
-                <div class="date-block__icon--active"></div>
+                <svg width="28" height="28" class="date-block__date-icon"><use xlink:href="#calendar"></use></svg>
               </label>
             </div>
             <label for="roundtrip" class="date-block__roundtrip-label">
@@ -79,8 +79,8 @@
             <div class="date-block__item">
               <label for="return-date" class="date-block__label">
                 Return date: <br>
-                <input type="text" class="date-block__input date-block__input--inactive" id="return-date" disabled placeholder="dd.mm.yyyy">
-                <div class="date-block__icon--disabled"></div>
+                <input type="text" class="date-block__input js-return date-block__input--inactive" id="return-date" placeholder="dd.mm.yyyy">
+                <svg width="28" height="28" class="date-block__date-icon"><use xlink:href="#calendar"></use></svg>
               </label>
             </div>
           </div>
