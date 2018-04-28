@@ -20,8 +20,7 @@ $( function() {
 
 
   var returnD = document.querySelector(".js-return");
-  var returnIcon = document.querySelector(".js-icon-calendar");
-  // var iconCalendarDisabled = document.querySelector(".js-icon-calendar");
+  var returnIcon = document.querySelector("#return-icon")
   var checkbox = document.querySelector("input[type=checkbox]");
   console.log(checkbox)
   function returnDate() {
@@ -30,9 +29,10 @@ $( function() {
       returnIcon.classList.toggle("date-block__icon--disabled")
       if (checkbox.checked) {
         returnD.disabled = false;
-
+        returnIcon.style.fill = "#656565"
       } else {
         returnD.disabled = true;
+        returnIcon.style.fill = "#94c4db"
       }
     })
   }
