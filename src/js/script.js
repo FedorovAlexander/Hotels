@@ -15,4 +15,25 @@ multiMenu.addEventListener("mouseout", function() {
 
 $( function() {
     $( "#departure-date" ).datepicker({ dateFormat: 'dd.mm.yy' });
+    $( "#return-date" ).datepicker({ dateFormat: 'dd.mm.yy' });
   } );;
+
+
+  var returnD = document.querySelector(".js-return");
+  var returnIcon = document.querySelector(".js-icon-calendar");
+  // var iconCalendarDisabled = document.querySelector(".js-icon-calendar");
+  var checkbox = document.querySelector("input[type=checkbox]");
+  console.log(checkbox)
+  function returnDate() {
+    checkbox.addEventListener("change", function () {
+      returnD.classList.toggle("date-block__input--inactive")
+      returnIcon.classList.toggle("date-block__icon--disabled")
+      if (checkbox.checked) {
+        returnD.disabled = false;
+
+      } else {
+        returnD.disabled = true;
+      }
+    })
+  }
+  returnDate();
