@@ -11,7 +11,6 @@ multiMenu.addEventListener("mouseout", function() {
   multiMenu.classList.toggle("menu__list-item--active")
 })
 
-
 //Date picker
 
 $( function() {
@@ -19,9 +18,16 @@ $( function() {
     $( "#return-date" ).datepicker({ dateFormat: 'dd.mm.yy' });
   } );;
 
+//menu
+var menuBtn = document.querySelector(".menu-toggle");
+var nav = document.querySelector('.menu');
+menuBtn.addEventListener('click', function() {
+  nav.classList.toggle('menu-responsive')
+})
+
 //Date input
 
-  var returnD = document.querySelector(".js-return");
+  var returnD = document.querySelector("#return-date");
   var returnIcon = document.querySelector("#return-icon")
   var checkbox = document.querySelector("input[type=checkbox]");
   console.log(checkbox)
