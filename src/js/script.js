@@ -30,7 +30,6 @@ menuBtn.addEventListener('click', function() {
   var returnD = document.querySelector("#return-date");
   var returnIcon = document.querySelector("#return-icon")
   var checkbox = document.querySelector("input[type=checkbox]");
-  console.log(checkbox)
   function returnDate() {
     checkbox.addEventListener("change", function () {
       returnD.classList.toggle("date-block__input--inactive")
@@ -48,10 +47,9 @@ menuBtn.addEventListener('click', function() {
 
   //Change city
 
-  var arrows = document.querySelector(".input-city__arrows")
-  var cityFrom =document.querySelector(".input-city__input-field--departure")
-  var cityTo =document.querySelector(".input-city__input-field--arrival")
-  arrows.addEventListener("click", function() {
-
-
-  })
+ var input = document.querySelectorAll('.input-city__input-field')
+ document.querySelector('#arrows').addEventListener('click', function() {
+   var val = input[0].value;
+   input[0].value = input[1].value;
+   input[1].value = val;
+ });
