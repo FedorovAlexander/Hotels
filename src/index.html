@@ -92,13 +92,16 @@
           <div class="currency">
             <label for="select-currency" class="currency__label">
               Currency <br>
-              <select name="currency" id="select-currency" class="currency__select">
-                <option value="USD" class="currency__option">USD</option>
-                <option value="RUB" class="currency__option" selected>RUB</option>
-                <option value="GBR" class="currency__option">GBR</option>
-                <option value="EUR" class="currency__option">EUR</option>
-                <option value="CHF" class="currency__option">CHF</option>
-              </select>
+              <div class="currency__wrapper">
+                <div class="select-icon"></div>
+                 <select name="currency" id="select-currency" class="currency__select">
+                   <option value="USD" class="currency__option">USD</option>
+                   <option value="RUB" class="currency__option" selected>RUB</option>
+                   <option value="GBR" class="currency__option">GBR</option>
+                   <option value="EUR" class="currency__option">EUR</option>
+                   <option value="CHF" class="currency__option">CHF</option>
+                 </select>
+              </div>
             </label>
           </div>
           <button class="search-button"><span class="search-button__text">Search</span></button>
