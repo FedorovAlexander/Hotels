@@ -13,12 +13,21 @@
   border-radius: 3px;
   border: 1px solid #de5300;
   background-image: linear-gradient(to top, #f75e02 0%, #fbb04c 100%);
-  &:after {
-    content: "";
-    position: absolute;
-    display: block;
-    top: 15px;
-    left: 54px;
-    .sprite(@search);
-    }
+  &__text {
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0px;
+      left: -25px;
+      .sprite(@search);
+      }
+  }
+}
+@media (max-width: @screen-sm)  {
+  .search-button {
+  width: 80%;
+  margin-right: 0;
+  }
 }
