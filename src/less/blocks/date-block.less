@@ -37,7 +37,7 @@
     fill: #656565;
   }
   &__date-icon--disabled {
-    fill: #94c4db; 
+    fill: #94c4db;
   }
   &__roundtrip-label {
     position: relative;
@@ -65,6 +65,18 @@
     vertical-align: middle;
     &[type=checkbox] {
       transform: scale(1.4);
+    }
+  }
+}
+@media (max-width: @screen-md)  {
+  .date-block {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    &__roundtrip-label {
+      margin-left: 0px;
+      margin-right: 0px;
+      margin-bottom: 25px;
     }
   }
 }
