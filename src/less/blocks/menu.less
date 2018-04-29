@@ -1,9 +1,8 @@
 .menu {
     flex: 760;
-    padding-left: 14px;
-    padding-right: 14px;
     margin-top: 0;
     margin-bottom: 0;
+    z-index: 100;
   &__list {
     list-style: none;
     display: flex;
@@ -16,8 +15,8 @@
     height: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
     transition: background-color 0.2s linear;
     &:hover {
       background-color: #f75c00;
@@ -81,10 +80,11 @@
   }
 }
 .sign-in {
-  flex:80;
+  flex:74;
   text-align: right;
   padding-right: 13px;
   padding-top: 10px;
+  padding-bottom: 10px;
   &__link {
     color: @text-color;
     font-size: 14px;
@@ -102,7 +102,70 @@
     left: -22px;
     background-repeat: no-repeat;
     display: inline-block;
-    // margin-top: 5px;
     .sprite(@sign-icon);
+  }
+}
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  padding-top: 5px;
+  padding-left: 10px;
+}
+.menu-responsive {
+  display: none;
+}
+
+@media (max-width: @screen-md)  {
+  .menu-toggle {
+    display: block;
+  }
+  .menu {
+    display: none;
+    &__list {
+      padding-top: 40px;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    &__submenu-list {
+      position: relative;
+      &--active {
+        top: 5px;
+      }
+    }
+    &__submenu-item {
+      width: 100%;
+      background-color: @header-bg-color;
+      border: none;
+    }
+    &__submenu-link {
+      width: 100%;
+      background-color: @header-bg-color;
+      color: @text-color;
+    }
+    &__list-item {
+
+      &:hover {
+        background-color: @header-bg-color;
+        transition: background-color 0.2s linear;
+      }
+      &:focus {
+        background-color: @header-bg-color;
+        transition: background-color 0.2s linear;
+      }
+      &--active {
+        background-color: @header-bg-color;
+      }
+    }
+  }
+  .menu-responsive {
+    display: block;
+  }
+}
+@media (min-width: @screen-lg)  {
+  .menu {
+    &__submenu-link {
+      color: #000;
+      z-index: 1000;
+    }
   }
 }
