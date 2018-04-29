@@ -70,10 +70,10 @@
             <div class="date-block__item">
               <label for="departure-date" class="date-block__label">
                 Departure date: <br>
-                <div class="date-block__input-wrapper">
+                <span class="date-block__input-wrapper">
                   <input type="text" class="date-block__input" id="departure-date" placeholder="dd.mm.yyyy">
                   <svg width="28" height="28" class="date-block__date-icon"><use xlink:href="#calendar"></use></svg>
-                </div>
+                </span>
               </label>
             </div>
             <label for="roundtrip" class="date-block__roundtrip-label">
@@ -83,17 +83,17 @@
             <div class="date-block__item">
               <label for="return-date" class="date-block__label">
                 Return date: <br>
-                <div class="date-block__input-wrapper">
+                <span class="date-block__input-wrapper">
                   <input type="text" class="date-block__input date-block__input--inactive" id="return-date" placeholder="dd.mm.yyyy" disabled>
                   <svg width="28" height="28" class="date-block__date-icon date-block__date-icon--disabled" id="return-icon"><use xlink:href="#calendar"></use></svg>
-                </div>
+                </span>
               </label>
             </div>
           </div>
           <div class="currency">
             <label for="select-currency" class="currency__label">
               Currency <br>
-              <select name="" id="select-currency" class="currency__select">
+              <select name="currency" id="select-currency" class="currency__select">
                 <option value="USD" class="currency__option">USD</option>
                 <option value="RUB" class="currency__option" selected>RUB</option>
                 <option value="GBR" class="currency__option">GBR</option>
