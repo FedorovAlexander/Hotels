@@ -106,6 +106,7 @@
   }
 }
 .menu-toggle {
+  color: @text-color;
   display: none;
   font-size: 24px;
   padding-top: 5px;
@@ -114,7 +115,16 @@
 .menu-responsive {
   display: none;
 }
-
+@media (max-width: @screen-xs)  {
+  .sign-in {
+    flex: 170;
+    }
+  }
+@media (max-width: @screen-sm)  {
+  .sign-in {
+    flex: 170;
+    }
+  }
 @media (max-width: @screen-md)  {
   .menu-toggle {
     display: block;
