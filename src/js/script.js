@@ -1,7 +1,6 @@
 var multiMenu = document.querySelector(".js-multi-item");
 var subMenu = document.querySelector(".menu__submenu-list")
 
-console.log(multiMenu)
 multiMenu.addEventListener("mouseover", function() {
   subMenu.classList.add("menu__submenu-list--active")
   multiMenu.classList.toggle("menu__list-item--active")
