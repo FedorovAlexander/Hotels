@@ -12,10 +12,14 @@ multiMenu.addEventListener("mouseout", function() {
 
 //Date picker
 
-$( function() {
-    $( "#departure-date" ).datepicker({ dateFormat: 'dd.mm.yy' });
-    $( "#return-date" ).datepicker({ dateFormat: 'dd.mm.yy' });
-  } );;
+$(function() {
+  $("#departure-date").datepicker({
+    dateFormat: 'dd.mm.yy'
+  });
+  $("#return-date").datepicker({
+    dateFormat: 'dd.mm.yy'
+  });
+});;
 
 //menu
 var menuBtn = document.querySelector(".menu-toggle");
@@ -26,29 +30,30 @@ menuBtn.addEventListener('click', function() {
 
 //Date input
 
-  var returnD = document.querySelector("#return-date");
-  var returnIcon = document.querySelector("#return-icon")
-  var checkbox = document.querySelector("input[type=checkbox]");
-  function returnDate() {
-    checkbox.addEventListener("change", function () {
-      returnD.classList.toggle("date-block__input--inactive")
-      returnIcon.classList.toggle("date-block__icon--disabled")
-      if (checkbox.checked) {
-        returnD.disabled = false;
-        returnIcon.style.fill = "#656565"
-      } else {
-        returnD.disabled = true;
-        returnIcon.style.fill = "#94c4db"
-      }
-    })
-  }
-  returnDate();
+var returnD = document.querySelector("#return-date");
+var returnIcon = document.querySelector("#return-icon")
+var checkbox = document.querySelector("input[type=checkbox]");
 
-  //Change city
+function returnDate() {
+  checkbox.addEventListener("change", function() {
+    returnD.classList.toggle("date-block__input--inactive")
+    returnIcon.classList.toggle("date-block__icon--disabled")
+    if (checkbox.checked) {
+      returnD.disabled = false;
+      returnIcon.style.fill = "#656565"
+    } else {
+      returnD.disabled = true;
+      returnIcon.style.fill = "#94c4db"
+    }
+  })
+}
+returnDate();
 
- var input = document.querySelectorAll('.input-city__input-field')
- document.querySelector('#arrows').addEventListener('click', function() {
-   var val = input[0].value;
-   input[0].value = input[1].value;
-   input[1].value = val;
- });
+//Change city
+
+var input = document.querySelectorAll('.input-city__input-field')
+document.querySelector('#arrows').addEventListener('click', function() {
+  var val = input[0].value;
+  input[0].value = input[1].value;
+  input[1].value = val;
+});
