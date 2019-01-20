@@ -22,11 +22,15 @@ $(function() {
 });;
 
 //menu
-var menuBtn = document.querySelector(".menu-toggle");
-var nav = document.querySelector('.menu');
-menuBtn.addEventListener('click', function() {
-  nav.classList.toggle('menu-responsive')
-})
+// var menuBtn = document.querySelector(".menu-toggle");
+// var nav = document.querySelector('.menu');
+// var main = document.querySelector('.input-block')
+// menuBtn.addEventListener('click', function() {
+//   nav.classList.toggle('menu-responsive')
+// })
+// main.addEventListener('click', function() {
+//   nav.classList.remove('menu-responsive')
+// })
 
 //Date input
 
@@ -56,4 +60,14 @@ document.querySelector('#arrows').addEventListener('click', function() {
   var val = input[0].value;
   input[0].value = input[1].value;
   input[1].value = val;
+});
+
+//Responsive menu
+
+$(document).ready(function () {
+  $('.response--main-navigation').basicResponsiveMenu({
+    animate: true,
+    browserWidth: 980,
+    slideDir: 'right',
+  });
 });
