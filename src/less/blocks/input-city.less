@@ -47,19 +47,39 @@
   }
 
   &__arrows {
-    position: absolute;
-    top: 37px;
-    left: -43px;
-    background-repeat: no-repeat;
     display: inline-block;
-    opacity: 0.5;
-    transition: opacity 0.1s linear;
-    .sprite(@arrows);
-    &:hover {
-      opacity: 1;
-      transition: opacity 0.1s linear;
-    }
+    position: absolute;
+    top: 33px;
+    left: -49px;
+    z-index: 1000;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
   }
+
+  &__arrows--right {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    width: 20px;
+    height: 8px;
+    transition: left 0.2s linear;
+    .sprite(@arrow-right)
+  }
+
+  &__arrows--left {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    width: 20px;
+    height: 8px;
+    transition: left 0.2s linear;
+    content: "";
+    .sprite(@arrow-left)
+  }
+
   &__example {
     font-size: 14px;
 
