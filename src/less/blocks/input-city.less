@@ -1,46 +1,52 @@
 .input-city {
   display: flex;
-  justify-content: space-between;
   flex-direction: row;
+  justify-content: space-between;
   margin-bottom: 22px;
+
   &__item {
-    text-align: left;
-    flex: 1;
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: space-between;
+    text-align: left;
   }
+
   &__item--departure {
     margin-right: 2px;
   }
+
   &__item--arrival {
     margin-left: 2px;
   }
 
   &__item-title {
-    font-size: 14px;
     position: relative;
     width: 100%;
+    font-size: 14px;
   }
+
   &__input-field {
     box-sizing: border-box;
-    width: 100%;
     flex: 1;
-    border: 1px solid #d7d7d7;
-    background-color: #ffffff;
-    padding-right: 14px;
-    padding-left: 14px;
-    padding-top: 12px;
-    padding-bottom: 12px;
     margin-top: 5px;
     margin-bottom: 5px;
+    width: 100%;
+    border: none;
+    background-color: #ffffff;
+    padding-top: 16px;
+    padding-right: 14px;
+    padding-bottom: 16px;
+    padding-left: 14px;
     font-size: 17px;
   }
 
   &__input-field--departure {
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
+    padding-right: 40px;
   }
+
   &__input-field--arrival {
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
@@ -82,49 +88,57 @@
 
   &__example {
     font-size: 14px;
-
   }
+
   &__example-link {
+    opacity: 0.5;
     text-decoration: none;
     color: #fff;
-    opacity: 0.5;
+
     &:hover {
       opacity: 1;
     }
   }
+
   &__example-text {
     opacity: 0.5;
   }
 }
-@media (max-width: @screen-md)  {
+
+@media (max-width: @screen-md) {
   .input-city {
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
+
     &__items {
       margin-bottom: 20px;
     }
+
     &__arrows {
-      left: 400px;
       top: -18px;
+      left: 400px;
       transform: rotate(90deg);
     }
   }
 }
-@media (max-width: 420px)  {
+
+@media (max-width: 420px) {
   .input-city {
     &__arrows {
       left: 250px;
     }
   }
 }
-@media (max-width: @screen-xs)  {
+
+@media (max-width: @screen-xs) {
   .input-city {
     &__input-field {
       max-width: 250px;
     }
+
     &__arrows {
-      left: 250px;
       top: -18px;
+      left: 250px;
       transform: rotate(90deg);
     }
   }
