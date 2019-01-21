@@ -1,19 +1,31 @@
 .input-city {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   margin-bottom: 22px;
-  &__items {
+  &__item {
     text-align: left;
-    padding-left: 12px;
-    padding-right: 12px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
+  &__item--departure {
+    margin-right: 2px;
+  }
+  &__item--arrival {
+    margin-left: 2px;
+  }
+
   &__item-title {
     font-size: 14px;
     position: relative;
+    width: 100%;
   }
   &__input-field {
-    width: 370px;
-    border-radius: 6px;
+    box-sizing: border-box;
+    width: 100%;
+    flex: 1;
     border: 1px solid #d7d7d7;
     background-color: #ffffff;
     padding-right: 14px;
@@ -24,6 +36,16 @@
     margin-bottom: 5px;
     font-size: 17px;
   }
+
+  &__input-field--departure {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+  }
+  &__input-field--arrival {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+
   &__arrows {
     position: absolute;
     top: 37px;
