@@ -1,18 +1,20 @@
-var multiMenu = document.querySelector(".js-multi-item");
-var subMenu = document.querySelector(".menu__submenu-list")
+function multiMenu() {
+  var multiMenu = document.querySelector(".js-multi-item");
+  var subMenu = document.querySelector(".menu__submenu-list")
 
-multiMenu.addEventListener("mouseover", function() {
-  subMenu.classList.add("menu__submenu-list--active")
-  multiMenu.classList.toggle("menu__list-item--active")
-})
-multiMenu.addEventListener("mouseout", function() {
-  subMenu.classList.remove("menu__submenu-list--active")
-  multiMenu.classList.toggle("menu__list-item--active")
-})
+  multiMenu.addEventListener("mouseover", function () {
+    subMenu.classList.add("menu__submenu-list--active")
+    multiMenu.classList.toggle("menu__list-item--active")
+  })
+  multiMenu.addEventListener("mouseout", function () {
+    subMenu.classList.remove("menu__submenu-list--active")
+    multiMenu.classList.toggle("menu__list-item--active")
+  })
+}
 
 //Date picker
 
-$(function() {
+$(function () {
   $("#departure-date").datepicker({
     dateFormat: 'dd.mm.yy'
   });
@@ -21,25 +23,13 @@ $(function() {
   });
 });;
 
-//menu
-// var menuBtn = document.querySelector(".menu-toggle");
-// var nav = document.querySelector('.menu');
-// var main = document.querySelector('.input-block')
-// menuBtn.addEventListener('click', function() {
-//   nav.classList.toggle('menu-responsive')
-// })
-// main.addEventListener('click', function() {
-//   nav.classList.remove('menu-responsive')
-// })
-
 //Date input
 
-var returnD = document.querySelector("#return-date");
-var returnIcon = document.querySelector("#return-icon")
-var checkbox = document.querySelector("input[type=checkbox]");
-
 function returnDate() {
-  checkbox.addEventListener("change", function() {
+  var returnD = document.querySelector("#return-date");
+  var returnIcon = document.querySelector("#return-icon")
+  var checkbox = document.querySelector("input[type=checkbox]");
+  checkbox.addEventListener("change", function () {
     returnD.classList.toggle("date-block__input--inactive")
     returnIcon.classList.toggle("date-block__icon--disabled")
     if (checkbox.checked) {
@@ -53,14 +43,19 @@ function returnDate() {
 }
 returnDate();
 
-//Change city
+//arrows 
 
-var input = document.querySelectorAll('.input-city__input-field')
-document.querySelector('#arrows').addEventListener('click', function() {
-  var val = input[0].value;
-  input[0].value = input[1].value;
-  input[1].value = val;
-});
+
+//Change city
+function changeCity() {
+  var input = document.querySelectorAll('.input-city__input-field')
+  document.querySelector('#arrows').addEventListener('click', function () {
+    var val = input[0].value;
+    input[0].value = input[1].value;
+    input[1].value = val;
+  });
+}
+changeCity();
 
 //Responsive menu
 
@@ -71,3 +66,21 @@ $(document).ready(function () {
     slideDir: 'right',
   });
 });
+
+//Arrows hover
+
+function arrowsHover() {
+  var arrows = document.querySelector('.input-city__arrows')
+  var arrow1 = arrows.querySelector('.input-city__arrows--right');
+  var arrow2 = arrows.querySelector('.input-city__arrows--left');
+  arrows.addEventListener("mouseover", function () {
+    arrow1.style.left = '5px';
+    arrow2.style.left = '10px';
+  })
+  arrows.addEventListener("mouseout", function () {
+    arrow1.style.left = '10px';
+    arrow2.style.left = '5px';
+  })
+}
+
+arrowsHover();
