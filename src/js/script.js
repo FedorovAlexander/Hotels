@@ -67,7 +67,7 @@ document.querySelector('#arrows').addEventListener('click', function() {
 $(document).ready(function () {
   $('.response--main-navigation').basicResponsiveMenu({
     animate: true,
-    browserWidth: 980,
+    browserWidth: 1080,
     slideDir: 'right',
   });
 });
