@@ -42,11 +42,11 @@ $.fn.basicResponsiveMenu = function(options) {
 		// if buttons with a class of show-nav and hide-nav don't exist, add them
 		var showNav = $('.response--main-navigation').children('button.show-nav');
 		if(showNav.length === 0){
-			$('.response--main-navigation').append('<button class="show-nav"></button>');
+			$('.response--main-navigation').append('<button class="show-nav"><svg width="28" height="28" class="menu__show-icon" id="show-icon"><use xlink:href="#menu"></use></svg></button>');
 		}
 		var hideNav = $('.response--site-menu').children('button.hide-nav');
 		if(hideNav.length === 0){
-			$('.response--site-menu').prepend('<button class="hide-nav"></button>');
+			$('.response--site-menu').prepend('<button class="hide-nav"><svg width="28" height="28" class="menu__close-icon" id="return-icon"><use xlink:href="#cross"></use></svg></button>');
 		}
 	}
 

@@ -16,41 +16,27 @@
 /* Responsive! */
 .show-nav,
 .hide-nav {
+  position: relative;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
 }
 
 .hide-nav {
   margin-bottom: 2rem;
-  width: 30px;
-  height: 30px;
-}
-
-.show-nav:before,
-.hide-nav:before {
-  font-family: "FontAwesome";
-}
-
-.show-nav:before {
-  content: "\f0c9";
-
-}
-
-.hide-nav:before {
-  content: "\f00d";
-  position: absolute;
-  left: 0px;
-  top: -5px;
+  width: 40px;
+  height: 40px;
 }
 
 .response--main-navigation.mobile-nav .response--site-menu {
   display: block;
-  min-height: 100vh;
-  overflow-y: auto;
 
   position: fixed;
-  left: -25px;
   top: -25px;
   right: 100%;
+  left: -25px;
+  min-height: 100vh;
+  overflow-y: auto;
   transform: translateX(-100%);
 
   transition: all .05s;
@@ -64,7 +50,10 @@
 // custom styles
 
 @media screen and (max-width: 1080px) {
-
+  button.show-nav {
+    padding: 0;
+    top: 2px;
+  }
   .response--site-menu {
     position: absolute;
     top: 0px;
@@ -72,24 +61,20 @@
     min-height: 100vh;
     background-color: #363341;
     padding-top: 30px;
-    padding-left: 50px;
     padding-right: 50px;
+    padding-left: 50px;
   }
 
   .show-nav {
-    background-color: transparent;
     border: none;
-    font-size: 2rem;
-    color: #fff;
+    background-color: transparent;
   }
 
   .hide-nav {
-    background-color: transparent;
-    border: none;
-    font-size: 2.5rem;
-    color: #fff;
-    padding-left: 20px;
     position: relative;
+    border: none;
+    background-color: transparent;
+    padding-left: 20px;
   }
 
 }
