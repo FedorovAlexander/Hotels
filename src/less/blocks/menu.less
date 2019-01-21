@@ -122,14 +122,6 @@
   }
 }
 
-.menu-toggle {
-  display: none;
-  padding-top: 5px;
-  padding-left: 10px;
-  color: @text-color;
-  font-size: 24px;
-}
-
 @media (max-width: @screen-xs) {
   .sign-in {
     flex: 170;
@@ -148,8 +140,10 @@
   }
 
   .menu {
+    &__list-item:first-child {
+      padding-left: 0;
+    }
 
-    // display: none;
     &__list {
       flex-direction: column;
       justify-content: flex-start;
@@ -193,14 +187,22 @@
       }
     }
   }
+}
 
-  .menu-responsive {
-    display: block;
+@media (max-width: @screen-lg) {
+  .menu {
+    &__list-item:first-child {
+      padding-left: 0;
+    }
   }
 }
 
 @media (min-width: @screen-lg) {
   .menu {
+    &__list-item:first-child {
+      padding-left: 0;
+    }
+
     &__submenu-link {
       z-index: 1000;
       color: #000;
