@@ -1,16 +1,18 @@
 function multiMenu() {
   var multiMenu = document.querySelector(".js-multi-item");
-  var subMenu = document.querySelector(".menu__submenu-list")
+  var subMenu = document.querySelector(".menu__submenu-list");
+  var link = multiMenu.querySelector('.menu__list-link')
 
   multiMenu.addEventListener("mouseover", function () {
-    subMenu.classList.add("menu__submenu-list--active")
-    multiMenu.classList.toggle("menu__list-item--active")
-  })
+    subMenu.classList.add("menu__submenu-list--active");
+    link.classList.add("menu__list-link--active");
+  });
   multiMenu.addEventListener("mouseout", function () {
-    subMenu.classList.remove("menu__submenu-list--active")
-    multiMenu.classList.toggle("menu__list-item--active")
-  })
+    subMenu.classList.remove("menu__submenu-list--active");
+    link.classList.remove("menu__list-link--active");
+  });
 }
+multiMenu();
 
 //Date picker
 
@@ -27,11 +29,11 @@ $(function () {
 
 function returnDate() {
   var returnD = document.querySelector("#return-date");
-  var returnIcon = document.querySelector("#return-icon")
+  var returnIcon = document.querySelector("#return-icon");
   var checkbox = document.querySelector("input[type=checkbox]");
   checkbox.addEventListener("change", function () {
-    returnD.classList.toggle("date-block__input--inactive")
-    returnIcon.classList.toggle("date-block__icon--disabled")
+    returnD.classList.toggle("date-block__input--inactive");
+    returnIcon.classList.toggle("date-block__icon--disabled");
     if (checkbox.checked) {
       returnD.disabled = false;
       returnIcon.style.fill = "#656565"
@@ -39,7 +41,7 @@ function returnDate() {
       returnD.disabled = true;
       returnIcon.style.fill = "#94c4db"
     }
-  })
+  });
 }
 returnDate();
 
@@ -48,7 +50,7 @@ returnDate();
 
 //Change city
 function changeCity() {
-  var input = document.querySelectorAll('.input-city__input-field')
+  var input = document.querySelectorAll('.input-city__input-field');
   document.querySelector('#arrows').addEventListener('click', function () {
     var val = input[0].value;
     input[0].value = input[1].value;
@@ -70,17 +72,17 @@ $(document).ready(function () {
 //Arrows hover
 
 function arrowsHover() {
-  var arrows = document.querySelector('.input-city__arrows')
+  var arrows = document.querySelector('.input-city__arrows');
   var arrow1 = arrows.querySelector('.input-city__arrows--right');
   var arrow2 = arrows.querySelector('.input-city__arrows--left');
   arrows.addEventListener("mouseover", function () {
     arrow1.style.left = '5px';
     arrow2.style.left = '10px';
-  })
+  });
   arrows.addEventListener("mouseout", function () {
     arrow1.style.left = '10px';
     arrow2.style.left = '5px';
-  })
+  });
 }
 
 arrowsHover();
