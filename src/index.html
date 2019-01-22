@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    @@include('img/sprite-svg.svg')
+  @@include('img/sprite-svg.svg')
   <header class="page-header">
     <div class="page-header__container container">
       <nav class="menu nav response--main-navigation">
@@ -15,99 +15,131 @@
           <li class="menu__list-item"><a href="#" class="menu__list-link">Search tickets</a></li>
           <li class="menu__list-item"><a href="#" class="menu__list-link">Sapsan</a></li>
           <li class="menu__list-item"><a href="#" class="menu__list-link">Allegro</a></li>
-          <li class="menu__list-item menu__list-item--multi"><a href="#" class="menu__list-link"><div class="menu__list-link-icon"></div>Trans-siberian</a></li>
-          <li class="menu__list-item menu__list-item--multi"><a href="#" class="menu__list-link"><div class="menu__list-link-icon"></div>FAQ</a></li>
-          <li class="menu__list-item menu__list-item--multi js-multi-item"><a href="#" class="menu__list-link"><div class="menu__list-link-icon"></div>Tickets guide</a>
+          <li class="menu__list-item menu__list-item--multi">
+            <a href="#" class="menu__list-link">
+              <div class="menu__list-link-icon"></div>
+              Trans-siberian
+            </a>
+          </li>
+          <li class="menu__list-item menu__list-item--multi">
+            <a href="#" class="menu__list-link">
+              <div class="menu__list-link-icon"></div>
+              FAQ
+            </a>
+          </li>
+          <li class="menu__list-item menu__list-item--multi js-multi-item">
+            <a href="#" class="menu__list-link">
+              <div class="menu__list-link-icon"></div>
+              Tickets guide
+            </a>
             <ul class="menu__submenu-list">
               <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Group travel</a></li>
               <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Ticket types</a></li>
               <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Child policy</a></li>
               <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Change ticket request</a></li>
-              <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Cansel tickets</a></li>
+              <li class="menu__submenu-item"><a href="#" class="menu__submenu-link">Cancel tickets</a></li>
             </ul>
           </li>
-          <li class="menu__list-item menu__list-item--multi"><a href="" class="menu__list-link"><div class="menu__list-link-icon"></div>Contact us<div class="menu__icon"></div></a></li>
+          <li class="menu__list-item menu__list-item--multi">
+            <a href="" class="menu__list-link">
+              <div class="menu__list-link-icon"></div>
+              Contact us
+              <div class="menu__icon"></div>
+            </a>
+          </li>
         </ul>
       </nav>
       <div class="sign-in">
-        <a href="" class="sign-in__link"><div class="sign-in__icon"></div>Sign in</a>
+        <a href="" class="sign-in__link">
+          <div class="sign-in__icon"></div>Sign in
+        </a>
       </div>
     </div>
   </header>
   <main>
-      <section class="input-block">
-        <div class="input-block__container container">
+    <section class="input-block">
+      <div class="input-block__container container">
         <h1 class="main-title">Russian Train Tickets</h1>
-        <article class="input-city">
-          <div class="input-city__item input-city__item--departure">
-            <label for="departure-city" class="input-city__item-title">
-              Departure city: <br>
-              <input type="text" class="input-city__input-field input-city__input-field--departure" id="departure-city" placeholder="Type city name">
-            </label>
-            <div class="input-city__example">
-              <span class="input-city__example-text">Ex:</span>
-              <a href="#" class="input-city__example-link">St.Petersburg</a>
-              <a href="#" class="input-city__example-link">Moscow</a>
-            </div>
-          </div>
-          <div class="input-city__item input-city__item--arrival">
-            <label for="arrival-city" class="input-city__item-title">
-              Arrival city: <br>
-              <div class="input-city__arrows" id="arrows">
-                <span class="input-city__arrows input-city__arrows--left"></span>
-                <span class="input-city__arrows input-city__arrows--right"></span>
+        <form action="#" class="input-city__form">
+          <article class="input-city">
+            <div class="input-city__item input-city__item--departure">
+              <label for="departure-city" class="input-city__item-title">
+                Departure city: <br>
+                <input type="text" class="input-city__input-field input-city__input-field--departure" id="departure-city"
+                  placeholder="Type city name">
+              </label>
+              <div class="input-city__example">
+                <span class="input-city__example-text">Ex:</span>
+                <a href="#" class="input-city__example-link">St.Petersburg</a>
+                <a href="#" class="input-city__example-link">Moscow</a>
               </div>
-              <input type="text" class="input-city__input-field input-city__input-field--arrival" id="arrival-city" placeholder="Type city name">
-            </label>
-            <div class="input-city__example">
-              <span class="input-city__example-text">Ex:</span>
-              <a href="#" class="input-city__example-link">St.Petersburg</a>
-              <a href="#" class="input-city__example-link">Moscow</a>
             </div>
-          </div>
-        </article>
-        <article class="input-date-currency">
-          <div class="date-block">
-            <div class="date-block__item">
-              <label for="departure-date" class="date-block__label">
-                Departure date: <br>
-                <span class="date-block__input-wrapper">
-                  <input type="text" class="date-block__input" id="departure-date" placeholder="dd.mm.yyyy">
-                  <svg width="28" height="28" class="date-block__date-icon"><use xlink:href="#calendar"></use></svg>
-                </span>
+            <div class="input-city__item input-city__item--arrival">
+              <label for="arrival-city" class="input-city__item-title">
+                Arrival city: <br>
+                <div class="input-city__arrows" id="arrows">
+                  <span class="input-city__arrows input-city__arrows--left"></span>
+                  <span class="input-city__arrows input-city__arrows--right"></span>
+                </div>
+                <input type="text" class="input-city__input-field input-city__input-field--arrival" id="arrival-city"
+                  placeholder="Type city name">
+              </label>
+              <div class="input-city__example">
+                <span class="input-city__example-text">Ex:</span>
+                <a href="#" class="input-city__example-link">St.Petersburg</a>
+                <a href="#" class="input-city__example-link">Moscow</a>
+              </div>
+            </div>
+          </article>
+          <article class="input-date-currency">
+            <div class="date-block">
+              <div class="date-block__item">
+                <label for="departure-date" class="date-block__label">
+                  Departure date: <br>
+                  <span class="date-block__input-wrapper">
+                    <input type="text" class="date-block__input" id="departure-date" placeholder="dd.mm.yyyy">
+                    <svg width="28" height="28" class="date-block__date-icon">
+                      <use xlink:href="#calendar"></use>
+                    </svg>
+                  </span>
+                </label>
+              </div>
+              <label for="roundtrip" class="date-block__roundtrip-label">
+                <input type="checkbox" class="date-block__roundtrip-check" id="roundtrip">
+                Roundtrip <span class="date-block__roundtrip-arrow"></span>
+              </label>
+              <div class="date-block__item">
+                <label for="return-date" class="date-block__label">
+                  Return date: <br>
+                  <span class="date-block__input-wrapper">
+                    <input type="text" class="date-block__input date-block__input--inactive" id="return-date"
+                      placeholder="dd.mm.yyyy" disabled>
+                    <svg width="28" height="28" class="date-block__date-icon date-block__date-icon--disabled" id="return-icon">
+                      <use xlink:href="#calendar"></use>
+                    </svg>
+                  </span>
+                </label>
+              </div>
+            </div>
+            <div class="currency">
+              <label for="select-currency" class="currency__label">
+                Currency <br>
+                <div class="currency__wrapper">
+                  <div class="select-icon"></div>
+                  <select name="currency" id="select-currency" class="currency__select">
+                    <option value="USD" class="currency__option">USD</option>
+                    <option value="RUB" class="currency__option" selected>RUB</option>
+                    <option value="GBR" class="currency__option">GBR</option>
+                    <option value="EUR" class="currency__option">EUR</option>
+                    <option value="CHF" class="currency__option">CHF</option>
+                  </select>
+                </div>
               </label>
             </div>
-            <label for="roundtrip" class="date-block__roundtrip-label">
-              <input type="checkbox" class="date-block__roundtrip-check" id="roundtrip">
-              Roundtrip <span class="date-block__roundtrip-arrow"></span>
-            </label>
-            <div class="date-block__item">
-              <label for="return-date" class="date-block__label">
-                Return date: <br>
-                <span class="date-block__input-wrapper">
-                  <input type="text" class="date-block__input date-block__input--inactive" id="return-date" placeholder="dd.mm.yyyy" disabled>
-                  <svg width="28" height="28" class="date-block__date-icon date-block__date-icon--disabled" id="return-icon"><use xlink:href="#calendar"></use></svg>
-                </span>
-              </label>
-            </div>
-          </div>
-          <div class="currency">
-            <label for="select-currency" class="currency__label">
-              Currency <br>
-              <div class="currency__wrapper">
-                <div class="select-icon"></div>
-                 <select name="currency" id="select-currency" class="currency__select">
-                   <option value="USD" class="currency__option">USD</option>
-                   <option value="RUB" class="currency__option" selected>RUB</option>
-                   <option value="GBR" class="currency__option">GBR</option>
-                   <option value="EUR" class="currency__option">EUR</option>
-                   <option value="CHF" class="currency__option">CHF</option>
-                 </select>
-              </div>
-            </label>
-          </div>
-          <button class="search-button"><span class="search-button__text">Search</span></button>
-        </article>
+            <button class="search-button"><span class="search-button__text">Search</span></button>
+          </article>
+        </form>
+
       </div>
     </section>
   </main>
