@@ -71,7 +71,7 @@
   &__submenu-list--active {
     display: block;
     position: absolute;
-    top: 38px;
+    top: 44px;
     left: 0;
   }
 
@@ -164,10 +164,13 @@
     }
 
     &__submenu-list {
-      position: relative;
+      position: absolute;
+      background-color: @header-bg-color;
+      z-index: 100000000000000000;
 
       &--active {
-        top: 5px;
+        top: 40px;
+        background-color: @header-bg-color;
       }
     }
 
@@ -204,14 +207,37 @@
 
 @media (max-width: @screen-lg) {
   .menu {
-    &__list-item:first-child {
-      padding-left: 0;
+    &__list-link-icon {
+      left: 130px;
+    }
+    &__submenu-list {
+      position: absolute;
+      background-color: @header-bg-color;
+      z-index: 100000000000000000;
+
+      &--active {
+        top: 40px;
+        background-color: @header-bg-color;
+      }
+    }
+
+    &__submenu-item {
+      width: 100%;
+      border: none;
+      background-color: @header-bg-color;
+    }
+
+    &__submenu-link {
+      width: 100%;
+      background-color: @header-bg-color;
+      color: @text-color;
     }
   }
 }
 
 @media (min-width: @screen-lg) {
   .menu {
+ 
     &__list-item:first-child {
       padding-left: 15px;
     }
