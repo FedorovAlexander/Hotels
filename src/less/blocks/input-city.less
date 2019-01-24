@@ -55,9 +55,9 @@
   &__arrows {
     display: inline-block;
     position: absolute;
-    top: 33px;
+    top: 32px;
     left: -49px;
-    z-index: 1000;
+    z-index: 1;
     width: 40px;
     height: 40px;
     background-repeat: no-repeat;
@@ -108,24 +108,10 @@
 @media (max-width: @screen-md) {
   .input-city {
     align-items: center;
-    flex-direction: column;
+
 
     &__items {
       margin-bottom: 20px;
-    }
-
-    &__arrows {
-      top: -18px;
-      left: 400px;
-      transform: rotate(90deg);
-    }
-  }
-}
-
-@media (max-width: 420px) {
-  .input-city {
-    &__arrows {
-      left: 250px;
     }
   }
 }
@@ -134,12 +120,7 @@
   .input-city {
     &__input-field {
       max-width: 250px;
-    }
-
-    &__arrows {
-      top: -18px;
-      left: 250px;
-      transform: rotate(90deg);
+      font-size: 16px;
     }
   }
 }
