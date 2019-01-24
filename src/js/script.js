@@ -36,10 +36,11 @@ function returnDate() {
     returnIcon.classList.toggle("date-block__icon--disabled");
     if (checkbox.checked) {
       returnD.disabled = false;
-      returnIcon.style.fill = "#656565"
+      returnIcon.style.fill = "#656565";
     } else {
       returnD.disabled = true;
-      returnIcon.style.fill = "#94c4db"
+      returnIcon.style.fill = "#94c4db";
+      returnD.value = '';
     }
   });
 }
