@@ -14,16 +14,37 @@ function multiMenu() {
 }
 multiMenu();
 
+//Hide loader
+function hideLoader() {
+  if (window.location.pathname == '/tickets.html') {
+    setTimeout(function () {
+      var loader = document.querySelector('.ui.segment');
+      loader.style.display = 'none';
+    }, 1500)
+  }
+}
+
+hideLoader();
+
+
 //Date picker
 
-$(function () {
-  $("#departure-date").datepicker({
-    dateFormat: 'dd.mm.yy'
-  });
-  $("#return-date").datepicker({
-    dateFormat: 'dd.mm.yy'
-  });
-});;
+function datePicker() {
+  if (window.location.pathname == '/index.html') {
+    $(function () {
+      $("#departure-date").datepicker({
+        dateFormat: 'dd.mm.yy'
+      });
+      $("#return-date").datepicker({
+        dateFormat: 'dd.mm.yy'
+      });
+    });
+  } else {
+    return false
+  }
+}
+datePicker();
+
 
 //Date input
 
