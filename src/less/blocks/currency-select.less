@@ -1,44 +1,66 @@
 .currency {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
   text-align: left;
+
   &__select {
     position: relative;
-    min-width: 85px;
-    background-color: #fff;
-    color: #000;
-    font-weight: bold;
-    font-size: 17px;
-    border-radius: 6px 6px;
     margin-top: 5px;
-    padding-left: 11px;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    min-width: 85px;
+    border: none;
+    border-radius: 6px 6px;
+    background-color: #fff;
+    padding-top: 10px;
     padding-right: 15px;
-    border:none;
+    padding-bottom: 9px;
+    padding-left: 11px;
+    color: #000;
+    font-size: 17px;
+    font-weight: bold;
     -moz-appearance: none;
     -webkit-appearance: none;
+
     &:active {
       border-radius: 6px 6px 0px 0px;
     }
   }
+
   &__label {
-    font-size: 14px;
     color: @text-color;
+    font-size: 14px;
   }
+
   &__wrapper {
     display: block;
     position: relative;
 
     &:after {
-      content: '';
       position: absolute;
-      .sprite(@custom-arrow);
+      top: 12px;
+      right: 7px;
+      content: '';
       pointer-events: none;
-      top: 14px;
-      right: 4px;
+      .sprite(@custom-arrow);
 
     }
   }
 }
-.select-icon {
 
+.currency-button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 9px;
+  width: 100%;
+}
+
+@media (max-width: @screen-md) {
+  .currency {
+    margin-right: 15px;
+    margin-left: 0;
+  }
+
+  .currency-button-wrapper {
+    margin-left: 0px;
+  }
 }
