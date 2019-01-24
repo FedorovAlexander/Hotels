@@ -60,6 +60,35 @@ function changeCity() {
 }
 changeCity();
 
+//Set city from example
+
+function setCity() {
+  var spb = document.querySelector('.input-city__example-link--spb')
+  var msc = document.querySelector('.input-city__example-link--msc')
+  var arrival = document.querySelector('.input-city__item--arrival')
+  var departure = document.querySelector('.input-city__item--departure')
+  var departureInput = departure.querySelector('.input-city__input-field')
+  var arrivalInput = arrival.querySelector('.input-city__input-field')
+
+  arrival.querySelector('.input-city__example-link--spb').addEventListener('click', function () {
+    arrivalInput.value = spb.innerText;
+  })
+
+  arrival.querySelector('.input-city__example-link--msc').addEventListener('click', function () {
+    arrivalInput.value = msc.innerText;
+  })
+
+  departure.querySelector('.input-city__example-link--spb').addEventListener('click', function () {
+    departureInput.value = spb.innerText;
+  })
+
+  departure.querySelector('.input-city__example-link--msc').addEventListener('click', function () {
+    departureInput.value = msc.innerText;
+  })
+}
+
+setCity();
+
 //Responsive menu
 
 $(document).ready(function () {
