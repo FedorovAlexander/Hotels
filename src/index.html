@@ -61,7 +61,7 @@
       <div class="input-block__container container">
         <h1 class="main-title">Russian Train Tickets</h1>
         <form class="input-city__form" action='/tickets.html'>
-          <article class="input-city">
+          <div class="input-city">
             <div class="input-city__item input-city__item--departure">
               <label for="departure-city" class="input-city__item-title">
                 Departure city: <br>
@@ -77,10 +77,10 @@
             <div class="input-city__item input-city__item--arrival">
               <label for="arrival-city" class="input-city__item-title">
                 Arrival city: <br>
-                <div class="input-city__arrows" id="arrows">
+                <span class="input-city__arrows" id="arrows">
                   <span class="input-city__arrows input-city__arrows--left"></span>
                   <span class="input-city__arrows input-city__arrows--right"></span>
-                </div>
+                </span>
                 <input type="text" class="input-city__input-field input-city__input-field--arrival" id="arrival-city"
                   placeholder="Type city name" value="">
               </label>
@@ -90,14 +90,15 @@
                 <a href="#" class="input-city__example-link input-city__example-link--msc">Moscow</a>
               </div>
             </div>
-          </article>
-          <article class="input-date-currency">
+          </div>
+          <div class="input-date-currency">
             <div class="date-block">
               <div class="date-block__item">
                 <label for="departure-date" class="date-block__label">
                   Departure date: <br>
                   <span class="date-block__input-wrapper">
-                    <input type="text" class="date-block__input date-block__input--departure" id="departure-date" placeholder="dd.mm.yyyy">
+                    <input type="text" class="date-block__input date-block__input--departure" id="departure-date"
+                      placeholder="dd.mm.yyyy">
                     <svg width="28" height="28" class="date-block__date-icon">
                       <use xlink:href="#calendar"></use>
                     </svg>
@@ -112,8 +113,8 @@
                 <label for="return-date" class="date-block__label">
                   Return date: <br>
                   <span class="date-block__input-wrapper">
-                    <input type="text" class="date-block__input date-block__input--arrival date-block__input--inactive" id="return-date"
-                      placeholder="dd.mm.yyyy" disabled>
+                    <input type="text" class="date-block__input date-block__input--arrival date-block__input--inactive"
+                      id="return-date" placeholder="dd.mm.yyyy" disabled>
                     <svg width="28" height="28" class="date-block__date-icon date-block__date-icon--disabled" id="return-icon">
                       <use xlink:href="#calendar"></use>
                     </svg>
@@ -122,30 +123,30 @@
               </div>
             </div>
             <div class="currency-button-wrapper">
-                <div class="currency">
-                    <label for="select-currency" class="currency__label">
-                      Currency <br>
-                      <div class="currency__wrapper">
-                        <div class="select-icon"></div>
-                        <select name="currency" id="select-currency" class="currency__select">
-                          <option value="USD" class="currency__option">USD</option>
-                          <option value="RUB" class="currency__option" selected>RUB</option>
-                          <option value="GBR" class="currency__option">GBR</option>
-                          <option value="EUR" class="currency__option">EUR</option>
-                          <option value="CHF" class="currency__option">CHF</option>
-                        </select>
-                      </div>
-                    </label>
-                  </div>
-                  <button class="search-button"><span class="search-button__text">Search</span></button>
+              <div class="currency">
+                <div class="currency__wrapper">
+                  <label for="select-currency" class="currency__label">
+                    Currency <br>
+                    <span class="select-icon"></span>
+                    <select name="currency" id="select-currency" class="currency__select">
+                      <option value="USD" class="currency__option">USD</option>
+                      <option value="RUB" class="currency__option" selected>RUB</option>
+                      <option value="GBR" class="currency__option">GBR</option>
+                      <option value="EUR" class="currency__option">EUR</option>
+                      <option value="CHF" class="currency__option">CHF</option>
+                    </select>
+                  </label>
+                </div>
+              </div>
+              <button class="search-button"><span class="search-button__text">Search</span></button>
             </div>
-          </article>
+          </div>
         </form>
 
       </div>
     </section>
   </main>
-  <script src="js/script.min.js" charset="utf-8"></script>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>
