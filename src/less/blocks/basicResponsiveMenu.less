@@ -30,15 +30,11 @@
 
 .response--main-navigation.mobile-nav .response--site-menu {
   display: block;
-
-  position: fixed;
-  top: -25px;
-  right: 100%;
-  left: -25px;
+  top: 0px;
+  width: 100%;
   min-height: 100vh;
   overflow-y: auto;
   transform: translateX(-100%);
-
   transition: all .05s;
 }
 
@@ -54,14 +50,17 @@
     padding: 0;
   }
   .response--site-menu {
+    display: none;
     position: absolute;
     top: 0px;
+    left: 0px;
     z-index: 99999;
+    width: 100%;
     min-height: 100vh;
     background-color: @header-bg-color;
-    padding-top: 30px;
+    padding-top: 5px;
     padding-right: 50px;
-    padding-left: 50px;
+    padding-left: 20px;
   }
 
   .show-nav {
