@@ -292,6 +292,12 @@ This must be run when you have at least 2 sprites.
   height: 40px;
   background-repeat: no-repeat;
 }
+.input-city__arrows:hover .input-city__arrows--right {
+  left: 5px;
+}
+.input-city__arrows:hover .input-city__arrows--left {
+  left: 10px;
+}
 .input-city__arrows--right {
   display: block;
   position: absolute;
